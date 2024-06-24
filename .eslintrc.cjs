@@ -24,6 +24,7 @@ const config = {
   },
   plugins: [
     "@stylistic/ts",
+    "@stylistic",
   ],
   rules: {
     "@typescript-eslint/quotes": "off",
@@ -32,6 +33,8 @@ const config = {
     "@typescript-eslint/no-explicit-any": "error",
     "no-console": "warn",
     "@stylistic/ts/quotes": ["error", "double"],
+    "@stylistic/semi": ["error", "always"],
+    "@stylistic/semi-style": ["error", "last"],
   },
 };  
 

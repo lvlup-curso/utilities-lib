@@ -1,6 +1,6 @@
-import { defineConfig } from "vite"
-import dts from "vite-plugin-dts" // definition types plugin
-import { resolve } from "path"
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts"; // definition types plugin
+import { resolve } from "path";
 
 const config = defineConfig({
   build: {
@@ -14,6 +14,6 @@ const config = defineConfig({
   plugins: [
     dts()
   ]
-})
+});
 
 export default config;
