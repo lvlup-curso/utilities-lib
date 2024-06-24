@@ -16,7 +16,7 @@ const config = {
       },
     },
   ],
-  ignorePatterns: [".eslintrc.cjs", "dist"],
+  ignorePatterns: [".eslintrc.cjs", "dist", "commitlint.config.js"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
