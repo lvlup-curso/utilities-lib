@@ -5,19 +5,25 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "test": "echo",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest --watch",
+    "test:mutation": "stryker run",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --fix --ext .ts",
     "check:types": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@stryker-mutator/core": "^8.2.6",
+    "@stryker-mutator/vitest-runner": "^8.2.6",
     "@stylistic/eslint-plugin": "^2.2.2",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.8",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.25.2",
@@ -26,6 +32,7 @@
     "husky": "^8.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
   }
 }
