@@ -25,7 +25,7 @@ jobs:
       - name: Run test and report issues
         run: npm test
       - name: Run test and report issues
-        run: npm "test:mutation"
+        run: npm run test:mutation
       - name: Run stryker and report issues
         run: npm test
       - name: Build
