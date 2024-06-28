@@ -23,10 +23,8 @@ jobs:
       - name: npm install
         run: npm install
       - name: Run test and report issues
-        run: npm test
-      - name: Run test and report issues
+        run: npm run test
+      - name: Run stryker mutation testing
         run: npm run test:mutation
-      - name: Run stryker and report issues
-        run: npm test
       - name: Build
         run: npm run build
