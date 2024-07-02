@@ -8,8 +8,6 @@ export default mergeConfig(
   defineConfig({
     test: {
       globals: true,
-      // setupFiles: "./",
-      // environment: 'jsdom' // emular tiempos
       alias: {
         "@src": path.resolve(__dirname, "/src"),
       },
@@ -20,7 +18,7 @@ export default mergeConfig(
           branches: 80,
           statements: 80,
         },
-        include: ["src/**/*"],
+        include: ["src/**/*", "tests/**/*"],
       },
     },
   })
