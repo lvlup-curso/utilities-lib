@@ -1,19 +1,27 @@
 import { defineConfig } from "vite";
-import dts from "vite-plugin-dts"; // definition types plugin
-import { resolve } from "path";
+import dts from "vite-plugin-dts";
+import path, { resolve } from "path";
 
 const config = defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "utilities-lib"
+      name: "utilities-lib",
     },
     sourcemap: true,
-    target: "ESNext"
+    target: "ESNext",
+  },
+  resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "/src"),
+    },
   },
   plugins: [
-    dts()
-  ]
+    dts({
+      outDir: "dist",
+      exclude: ["**/*.test.ts", "tests/", "vitest.config.*"],
+    }),
+  ],
 });
 
 export default config;
