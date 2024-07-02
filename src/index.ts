@@ -2,4 +2,4 @@ export const print = (payload: unknown) => {
   return payload;
 };
 
-export const test = "";
+export const test = "test";
