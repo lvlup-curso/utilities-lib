@@ -10,16 +10,18 @@ describe("isObject tests", () => {
     expect(isObject({ hola: "" })).toBe(true);
   });
 
-  it("Should return false for ''", () => {
-    expect(isObject("")).toBe(false);
-  });
-  it("Should return false for 123", () => {
-    expect(isObject(123)).toBe(false);
-  });
-  it("Should return false for false", () => {
-    expect(isObject(false)).toBe(false);
-  });
-  it("Should return false for undefined", () => {
-    expect(isObject(undefined)).toBe(false);
-  });
+  it.each([
+    { value: "", expected: false },
+    { value: 123, expected: false },
+    { value: false, expected: false },
+    { value: true, expected: false },
+    { value: undefined, expected: false },
+    { value: null, expected: false },
+    { value: NaN, expected: false }
+  ])(
+    "Should return false if value -> $value is not an object",
+    ({ value, expected }) => {
+      expect(isObject(value)).toBe(expected);
+    }
+  );
 });

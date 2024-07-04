@@ -10,15 +10,21 @@ describe("isString tests", () => {
     expect(isString(`${123}`)).toBe(true);
   });
 
-  it("Should return false for 123", () => {
-    expect(isString(123)).toBe(false);
-  });
-
-  it("Should return false for false", () => {
-    expect(isString(false)).toBe(false);
-  });
-
-  it("Should return false for undefined", () => {
-    expect(isString(undefined)).toBe(false);
-  });
+  it.each([
+    { value: {}, expected: false },
+    { value: [], expected: false },
+    { value: { hola: "" }, expected: false },
+    { value: [""], expected: false },
+    { value: 123, expected: false },
+    { value: false, expected: false },
+    { value: true, expected: false },
+    { value: undefined, expected: false },
+    { value: null, expected: false },
+    { value: NaN, expected: false }
+  ])(
+    "Should return false if value -> $value is not a string",
+    ({ value, expected }) => {
+      expect(isString(value)).toBe(expected);
+    }
+  );
 });
