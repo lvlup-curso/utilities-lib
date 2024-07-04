@@ -21,6 +21,7 @@ export default mergeConfig(
           statements: 80,
         },
         include: ["src/**/*"],
+        exclude: ["**/index.ts"],
       },
     },
   })

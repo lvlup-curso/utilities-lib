@@ -1,3 +1,1 @@
-export const print = (payload: unknown) => {
-  return payload;
-};
+export * from "./strings";
