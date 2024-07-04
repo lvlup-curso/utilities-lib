@@ -1,5 +1,4 @@
 import { isObject } from "@src/objects";
-import { describe, it, expect } from "vitest";
 
 describe("isObject tests", () => {
   it("Should return true for {}", () => {

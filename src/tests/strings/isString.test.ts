@@ -1,5 +1,4 @@
 import { isString } from "@src/strings";
-import { describe, it, expect } from "vitest";
 
 describe("isString tests", () => {
   it("Should return true for 'string'", () => {
