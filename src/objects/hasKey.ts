@@ -1,5 +1,4 @@
-import { isString } from "@src/strings";
-import { isObject } from "./isObject";
+import { isString, isObject } from "@src/check";
 
 export const hasKey = (key: string, target: object) => {
   if (!isString(key) || !isObject(target)) {

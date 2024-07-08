@@ -1,4 +1,4 @@
-import { isString } from "./isString";
+import { isString } from "@src/check";
 
 export const capitalize = (value: string) => {
   if (!isString(value)) return value;

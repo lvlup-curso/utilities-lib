@@ -1,4 +1,4 @@
-import { isString } from "@src/strings";
+import { isString } from "@src/check";
 
 describe("isString tests", () => {
   it("Should return true for 'string'", () => {
