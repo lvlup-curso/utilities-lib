@@ -4,6 +4,12 @@
   "type": "module",
   "main": "./dist/utilities-lib.js",
   "types": "./dist/src/index.d.ts",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "helpers",
+    "utils"
+  ],
   "exports": {
     ".": {
       "import": "./dist/utilities-lib.js",
