@@ -13,7 +13,9 @@
   "exports": {
     ".": {
       "import": "./dist/utilities-lib.js",
-      "export": "./dist/utilities-lib.js"
+      "export": "./dist/utilities-lib.js",
+      "require": "./dist/utilities-lib.js",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "publishConfig": {
