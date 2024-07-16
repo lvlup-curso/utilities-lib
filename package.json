@@ -2,6 +2,20 @@
   "name": "utilities-lib",
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/utilities-lib.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/utilities-lib.js",
+      "export": "./dist/utilities-lib.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "test": "vitest run --coverage",
