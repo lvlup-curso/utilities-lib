@@ -8,6 +8,7 @@ const config = defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "utilities-lib",
     },
+    minify: false,
     sourcemap: true,
     target: "ESNext",
   },

@@ -1,8 +1,29 @@
 {
   "name": "utilities-lib",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/utilities-lib.js",
+  "types": "./dist/src/index.d.ts",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "helpers",
+    "utils"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/utilities-lib.js",
+      "export": "./dist/utilities-lib.js",
+      "require": "./dist/utilities-lib.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "test": "vitest run --coverage",
